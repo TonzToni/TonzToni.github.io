@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio of Anthony (Tony) Laughland — BSc (Hons) Computer Science Student at the University of Dundee">
+  <title>Anthony Laughland | Computer Science Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <a href="#intro" class="brand-name">Anthony Laughland</a>
+        <span class="brand-tag">BSc (Hons) Computer Science</span>
+      </div>
+      <nav aria-label="Primary Navigation">
+        <ul class="nav-list">
+          <li><a href="#intro">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#cv">CV &amp; Appendix</a></li>
+          <li><a href="#profiles">Profiles</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- 1. Homepage / Introduction -->
+    <section id="intro" class="hero section">
+      <div class="container">
+        <p class="eyebrow">University of Dundee &bull; Second-Year Computer Science</p>
+        <h1>Building reliable software, search algorithms, and real-time systems.</h1>
+        <p class="lead">
+          I am Anthony (Tony) Laughland, a second-year BSc (Hons) Computer Science student at the University of Dundee with strong foundations in object-oriented architecture, memory management, and data structures. Previously focused on systems-level design within game engines, my current work expands into AI search algorithms and structured software modelling.
+        </p>
+        <p class="lead">
+          I am seeking a <strong>Software Engineering Industrial Placement</strong> where I can collaborate across engineering and product teams to design, test, and deliver scalable, user-focused software solutions.
+        </p>
+        <div class="cta-group">
+          <a href="#projects" class="btn btn-primary">Explore Projects</a>
+          <a href="Anthony_Laughland_CV.pdf" class="btn btn-secondary" download>Download CV (PDF)</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Work Samples / Projects (At least 3 projects) -->
+    <section id="projects" class="section alt-bg">
+      <div class="container">
+        <h2>Selected Technical Projects</h2>
+        <p class="section-subtitle">Key academic and technical systems demonstrating algorithm design, engine architecture, and low-level memory management.</p>
+
+        <div class="project-grid">
+          <!-- Project 1 -->
+          <article class="card">
+            <div class="card-header">
+              <h3>2048 Autonomous AI Agent</h3>
+              <span class="badge">Python &bull; Group Project</span>
+            </div>
+            <p class="card-desc">
+              A benchmarking suite of search-based autonomous agents engineered to play 2048 under stochastic tile spawns for the CS21002 Artificial Intelligence module.
+            </p>
+            <ul class="project-details">
+              <li><strong>Role &amp; Contribution:</strong> Collaborated in a three-person team to design shared board-evaluation heuristics and implement Expectimax, Beam Search, and Greedy Best-First Search in Python.</li>
+              <li><strong>Challenges &amp; Outcomes:</strong> Balanced search tree depth against execution time across thousands of simulated moves, ranking agent progression objectively and demonstrating Expectimax's advantage under random state transitions.</li>
+            </ul>
+            <div class="card-footer">
+              <a href="https://github.com/TonzToni" target="_blank" rel="noopener noreferrer">View on GitHub &rarr;</a>
+            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="card">
+            <div class="card-header">
+              <h3>Seamless Non-Euclidean Portal System</h3>
+              <span class="badge">Unity &bull; C#</span>
+            </div>
+            <p class="card-desc">
+              A real-time spatial portal mechanic built inside a standard 3D game engine to achieve seamless visual rendering and physics traversal.
+            </p>
+            <ul class="project-details">
+              <li><strong>Role &amp; Contribution:</strong> Architected the end-to-end rendering and traversal pipeline using dynamic render textures, projection matrix manipulation, and live relative position tracking.</li>
+              <li><strong>Challenges &amp; Outcomes:</strong> Eliminated camera clipping and visual seams across linked portal orientations while maintaining smooth frame rates and extensible support for recursive views.</li>
+            </ul>
+            <div class="card-footer">
+              <a href="https://github.com/TonzToni" target="_blank" rel="noopener noreferrer">View on GitHub &rarr;</a>
+            </div>
+          </article>
+
+          <!-- Project 3 -->
+          <article class="card">
+            <div class="card-header">
+              <h3>Chained Hash Table &amp; File Processor</h3>
+              <span class="badge">C &bull; Data Structures</span>
+            </div>
+            <p class="card-desc">
+              A command-line text indexing and frequency-lookup utility written in C without relying on high-level standard collection libraries.
+            </p>
+            <ul class="project-details">
+              <li><strong>Role &amp; Contribution:</strong> Implemented a dynamic chained hash table from scratch using manual heap allocation (<code>malloc</code>/<code>free</code>), collision-handling linked lists, and deterministic file-stream parsing.</li>
+              <li><strong>Challenges &amp; Outcomes:</strong> Enforced strict pointer boundary checks and deterministic cleanup to prevent memory leaks while delivering fast O(1) average-case key lookup across large text inputs.</li>
+            </ul>
+            <div class="card-footer">
+              <a href="https://github.com/TonzToni" target="_blank" rel="noopener noreferrer">View on GitHub &rarr;</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Technical & Transferable Skills -->
+    <section id="skills" class="section">
+      <div class="container">
+        <h2>Technical &amp; Transferable Skills</h2>
+        <div class="skills-layout">
+          <div class="skill-block">
+            <h3>Technical Stack</h3>
+            <ul class="skill-list">
+              <li><strong>Languages:</strong> Java, Python, C, C++, C#, HTML/CSS</li>
+              <li><strong>Tools &amp; Platforms:</strong> Git/GitHub, Visual Studio Code, Unity, Docker, Linux VMs</li>
+              <li><strong>Core Concepts:</strong> Object-Oriented Programming (OOP), Data Structures &amp; Algorithms, Manual Memory Management, UML System Modelling</li>
+            </ul>
+            <div class="code-preview" aria-label="Sample C Hash Table Lookup Snippet">
+              <div class="code-title">Code Sample &mdash; Chained Hash Table Lookup (C)</div>
+              <pre><code>Node *lookup(HashTable *ht, const char *key) {
+    unsigned int idx = hash_fn(key) % ht-&gt;capacity;
+    for (Node *curr = ht-&gt;buckets[idx]; curr != NULL; curr = curr-&gt;next) {
+        if (strcmp(curr-&gt;key, key) == 0) return curr;
+    }
+    return NULL;
+}</code></pre>
+            </div>
+          </div>
+
+          <div class="skill-block">
+            <h3>Transferable Skills in Practice</h3>
+            <div class="transferable-item">
+              <h4>Cross-Functional Teamwork &amp; Communication</h4>
+              <p>
+                Coordinated algorithm benchmarking and code integration within a three-person university AI team, as well as collaborating daily with warehouse, crane, and fabrication teams at J&amp;D Pierce to verify steel batching schedules without error.
+              </p>
+            </div>
+            <div class="transferable-item">
+              <h4>Analytical Problem-Solving &amp; Diagnostics</h4>
+              <p>
+                Applied structured debugging across C memory management, 3D matrix transformations, and board-level electronics fault diagnosis—isolating root causes systematically under tight deadlines.
+              </p>
+            </div>
+            <div class="transferable-item">
+              <h4>Rapid Adaptability &amp; Self-Directed Learning</h4>
+              <p>
+                Transitioned directly into Year 2 BSc Computer Science at Dundee while administering self-hosted Linux virtual machines, dedicated game servers, and onboarding new colleagues during early-morning logistics shifts.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Downloadable CV & Target Job Advert Appendix -->
+    <section id="cv" class="section alt-bg">
+      <div class="container">
+        <h2>Curriculum Vitae &amp; Target Role</h2>
+        <p class="section-subtitle">
+          Aligned with my LinkedIn profile and tailored for the <strong>Lloyds Banking Group Software Engineering Industrial Placement</strong>.
+        </p>
+        <div class="doc-cards">
+          <div class="doc-card">
+            <h3>Two-Page Curriculum Vitae (PDF)</h3>
+            <p>Full breakdown of education, technical projects, J&amp;D Pierce operational experience, and technical interests.</p>
+            <div class="cta-group">
+              <a href="Anthony_Laughland_CV.pdf" class="btn btn-primary" download>Download CV (PDF)</a>
+              <a href="Anthony_Laughland_CV.pdf" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">View in Browser</a>
+            </div>
+          </div>
+
+          <div class="doc-card">
+            <h3>Appendix: Target Job Advert (Offline PDF)</h3>
+            <p>Archived offline copy of the Lloyds Banking Group (Group COO) Software Engineering Industrial Placement listing.</p>
+            <div class="cta-group">
+              <a href="Lloyds_Job_Advert.pdf" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Open Job Advert PDF</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Links to Professional Profiles -->
+    <section id="profiles" class="section">
+      <div class="container">
+        <h2>Professional Profiles &amp; Contact</h2>
+        <p class="section-subtitle">Connect with me or inspect my repositories and technical background.</p>
+        <ul class="profile-links">
+          <li>
+            <a href="https://github.com/TonzToni" target="_blank" rel="noopener noreferrer">
+              <strong>GitHub</strong> &mdash; github.com/TonzToni
+            </a>
+          </li>
+          <li>
+            <a href="https://linkedin.com/in/anthony-laughland-537aab349" target="_blank" rel="noopener noreferrer">
+              <strong>LinkedIn</strong> &mdash; linkedin.com/in/anthony-laughland-537aab349
+            </a>
+          </li>
+          <li>
+            <a href="mailto:anthony.laughland@gmail.com">
+              <strong>Email</strong> &mdash; anthony.laughland@gmail.com
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Anthony (Tony) Laughland &bull; Dundee, Scotland</p>
+    </div>
+  </footer>
+</body>
+</html>
