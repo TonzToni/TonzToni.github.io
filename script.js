@@ -15,7 +15,7 @@ hljs.highlightAll();
   track.insertBefore(lastClone, cards[0]);
   track.appendChild(firstClone);
 
-  let index = 2;
+  let index = 1;
   let timerId = null;
   let isTransitioning = false;
 
