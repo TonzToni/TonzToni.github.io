@@ -22,39 +22,48 @@
           <li><a href="#projects">Projects</a></li>
           <li><a href="#skills">Skills</a></li>
           <li><a href="#cv">CV &amp; Appendix</a></li>
-          <li><a href="#profiles">Profiles</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
   <main id="main-content">
-    <!-- 1. Homepage / Introduction -->
     <section id="intro" class="hero section">
       <div class="container">
         <p class="eyebrow">University of Dundee &bull; Second-Year Computer Science</p>
-        <h1>Building reliable software, search algorithms, and real-time systems.</h1>
         <p class="lead">
           I am Anthony (Tony) Laughland, a second-year BSc (Hons) Computer Science student at the University of Dundee with strong foundations in object-oriented architecture, memory management, and data structures. Previously focused on systems-level design within game engines, my current work expands into AI search algorithms and structured software modelling.
         </p>
-        <p class="lead">
-          I am seeking a <strong>Software Engineering Industrial Placement</strong> where I can collaborate across engineering and product teams to design, test, and deliver scalable, user-focused software solutions.
-        </p>
-        <div class="cta-group">
-          <a href="#projects" class="btn btn-primary">Explore Projects</a>
-          <a href="Anthony_Laughland_CV.pdf" class="btn btn-secondary" download>Download CV (PDF)</a>
+
+        <div class="hero-info" aria-label="Personal Information and Profiles">
+          <ul class="contact-list">
+            <li class="contact-item">
+              <span class="contact-label">Location</span>
+              <span class="contact-value">Dundee, Scotland</span>
+            </li>
+            <li class="contact-item">
+              <span class="contact-label">Phone</span>
+              <a href="tel:+447762847225" class="contact-value">+44 7762 847225</a>
+            </li>
+            <li class="contact-item">
+              <span class="contact-label">Email</span>
+              <a href="mailto:anthony.laughland@gmail.com" class="contact-value">anthony.laughland@gmail.com</a>
+            </li>
+          </ul>
+          <div class="cta-group">
+            <a href="https://github.com/TonzToni" class="btn btn-primary" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="https://linkedin.com/in/anthony-laughland-537aab349" class="btn btn-primary" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- 2. Work Samples / Projects (At least 3 projects) -->
     <section id="projects" class="section alt-bg">
       <div class="container">
         <h2>Selected Technical Projects</h2>
         <p class="section-subtitle">Key academic and technical systems demonstrating algorithm design, engine architecture, and low-level memory management.</p>
 
         <div class="project-grid">
-          <!-- Project 1 -->
           <article class="card">
             <div class="card-header">
               <h3>2048 Autonomous AI Agent</h3>
@@ -71,8 +80,6 @@
               <a href="https://github.com/TonzToni" target="_blank" rel="noopener noreferrer">View on GitHub &rarr;</a>
             </div>
           </article>
-
-          <!-- Project 2 -->
           <article class="card">
             <div class="card-header">
               <h3>Seamless Non-Euclidean Portal System</h3>
@@ -89,8 +96,6 @@
               <a href="https://github.com/TonzToni" target="_blank" rel="noopener noreferrer">View on GitHub &rarr;</a>
             </div>
           </article>
-
-          <!-- Project 3 -->
           <article class="card">
             <div class="card-header">
               <h3>Chained Hash Table &amp; File Processor</h3>
@@ -111,7 +116,6 @@
       </div>
     </section>
 
-    <!-- 3. Technical & Transferable Skills -->
     <section id="skills" class="section">
       <div class="container">
         <h2>Technical &amp; Transferable Skills</h2>
@@ -120,19 +124,9 @@
             <h3>Technical Stack</h3>
             <ul class="skill-list">
               <li><strong>Languages:</strong> Java, Python, C, C++, C#, HTML/CSS</li>
-              <li><strong>Tools &amp; Platforms:</strong> Git/GitHub, Visual Studio Code, Unity, Docker, Linux VMs</li>
-              <li><strong>Core Concepts:</strong> Object-Oriented Programming (OOP), Data Structures &amp; Algorithms, Manual Memory Management, UML System Modelling</li>
+              <li><strong>Tools &amp; Platforms:</strong> Git/GitHub, Visual Studio Code, Unity, Docker</li>
+              <li><strong>Core Concepts:</strong> Object-Oriented Programming (OOP), Data Structures &amp; Algorithms, Memory Management, UML System Modelling</li>
             </ul>
-            <div class="code-preview" aria-label="Sample C Hash Table Lookup Snippet">
-              <div class="code-title">Code Sample &mdash; Chained Hash Table Lookup (C)</div>
-              <pre><code>Node *lookup(HashTable *ht, const char *key) {
-    unsigned int idx = hash_fn(key) % ht-&gt;capacity;
-    for (Node *curr = ht-&gt;buckets[idx]; curr != NULL; curr = curr-&gt;next) {
-        if (strcmp(curr-&gt;key, key) == 0) return curr;
-    }
-    return NULL;
-}</code></pre>
-            </div>
           </div>
 
           <div class="skill-block">
@@ -157,10 +151,38 @@
             </div>
           </div>
         </div>
+
+        <div class="code-samples">
+          <h3>Example Code Snippets</h3>
+          <div class="code-samples-grid">
+            <div class="code-preview" aria-label="Sample C Hash Table Lookup Snippet">
+              <div class="code-title">Code Sample 1 &mdash; Chained Hash Table Lookup (C)</div>
+              <pre><code>Node *lookup(HashTable *ht, const char *key) {
+    unsigned int idx = hash_fn(key) % ht-&gt;capacity;
+    for (Node *curr = ht-&gt;buckets[idx]; curr != NULL; curr = curr-&gt;next) {
+        if (strcmp(curr-&gt;key, key) == 0) return curr;
+    }
+    return NULL;
+}</code></pre>
+            </div>
+
+            <div class="code-preview" aria-label="Sample Python Expectimax Search Snippet">
+              <div class="code-title">Code Sample 2 &mdash; Expectimax Chance Node (Python)</div>
+              <pre><code>def expectimax(board, depth, is_player_turn):
+    if depth == 0 or is_terminal(board):
+        return evaluate_board(board)
+    if is_player_turn:
+        return max(expectimax(move(board, d), depth - 1, False) for d in VALID_MOVES)
+    empty = get_empty_cells(board)
+    return sum(0.9 * expectimax(place(board, c, 2), depth - 1, True)
+               + 0.1 * expectimax(place(board, c, 4), depth - 1, True)
+               for c in empty) / len(empty)</code></pre>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- 4. Downloadable CV & Target Job Advert Appendix -->
     <section id="cv" class="section alt-bg">
       <div class="container">
         <h2>Curriculum Vitae &amp; Target Role</h2>
@@ -185,31 +207,6 @@
             </div>
           </div>
         </div>
-      </div>
-    </section>
-
-    <!-- 5. Links to Professional Profiles -->
-    <section id="profiles" class="section">
-      <div class="container">
-        <h2>Professional Profiles &amp; Contact</h2>
-        <p class="section-subtitle">Connect with me or inspect my repositories and technical background.</p>
-        <ul class="profile-links">
-          <li>
-            <a href="https://github.com/TonzToni" target="_blank" rel="noopener noreferrer">
-              <strong>GitHub</strong> &mdash; github.com/TonzToni
-            </a>
-          </li>
-          <li>
-            <a href="https://linkedin.com/in/anthony-laughland-537aab349" target="_blank" rel="noopener noreferrer">
-              <strong>LinkedIn</strong> &mdash; linkedin.com/in/anthony-laughland-537aab349
-            </a>
-          </li>
-          <li>
-            <a href="mailto:anthony.laughland@gmail.com">
-              <strong>Email</strong> &mdash; anthony.laughland@gmail.com
-            </a>
-          </li>
-        </ul>
       </div>
     </section>
   </main>

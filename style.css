@@ -130,15 +130,9 @@ button:focus-visible {
   border-bottom: 1px solid var(--border-color);
 }
 
-h1, h2, h3, h4 {
+h2, h3, h4 {
   margin-top: 0;
   line-height: 1.25;
-}
-
-h1 {
-  font-size: clamp(1.9rem, 4vw, 2.6rem);
-  margin-bottom: 20px;
-  letter-spacing: -0.02em;
 }
 
 h2 {
@@ -168,6 +162,54 @@ h2 {
   font-size: 1.08rem;
   max-width: 68ch;
   margin-bottom: 16px;
+}
+
+.hero-info {
+  margin-top: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.hero-info .cta-group {
+  margin-top: 0;
+}
+
+.contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.contact-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 10px 16px;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+}
+
+.contact-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+}
+
+.contact-value {
+  color: var(--text-primary);
+  font-size: 0.93rem;
+  text-decoration: none;
+}
+
+a.contact-value:hover {
+  color: var(--accent);
 }
 
 .cta-group {
@@ -293,11 +335,12 @@ h2 {
 }
 
 .code-preview {
-  margin-top: 20px;
   background-color: var(--code-bg);
   border: 1px solid var(--border-color);
   border-radius: 6px;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 .code-title {
@@ -315,6 +358,21 @@ h2 {
   font-size: 0.85rem;
   color: #e2e8f0;
   font-family: "Cascadia Code", "Fira Code", Consolas, monospace;
+  flex: 1;
+}
+
+.code-samples {
+  margin-top: 36px;
+}
+
+.code-samples h3 {
+  margin-bottom: 16px;
+}
+
+.code-samples-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
 }
 
 .transferable-item {
@@ -350,31 +408,6 @@ h2 {
 .doc-card p {
   color: var(--text-secondary);
   margin-bottom: 0;
-}
-
-/* Profiles */
-.profile-links {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: grid;
-  gap: 12px;
-  max-width: 560px;
-}
-
-.profile-links a {
-  display: block;
-  padding: 14px 18px;
-  background-color: var(--bg-card);
-  border: 1px solid var(--border-color);
-  border-radius: 6px;
-  color: var(--text-primary);
-  text-decoration: none;
-  transition: border-color 0.15s ease;
-}
-
-.profile-links a:hover {
-  border-color: var(--accent);
 }
 
 /* Footer */
