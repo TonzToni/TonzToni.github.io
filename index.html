@@ -5,20 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Portfolio of Anthony (Tony) Laughland — BSc (Hons) Computer Science Student at the University of Dundee">
   <title>Anthony Laughland | Computer Science Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/github-dark.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body id="top">
   <a href="#main-content" class="skip-link">Skip to main content</a>
 
   <header class="site-header">
     <div class="container header-inner">
       <div class="brand">
-        <a href="#intro" class="brand-name">Anthony Laughland</a>
+        <a href="#top" class="brand-name">Anthony Laughland</a>
         <span class="brand-tag">BSc (Hons) Computer Science</span>
       </div>
       <nav aria-label="Primary Navigation">
         <ul class="nav-list">
-          <li><a href="#intro">About</a></li>
+          <li><a href="#top">About</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#skills">Skills</a></li>
           <li><a href="#cv">CV &amp; Appendix</a></li>
@@ -32,7 +33,9 @@
       <div class="container">
         <p class="eyebrow">University of Dundee &bull; Second-Year Computer Science</p>
         <p class="lead">
-          I am Anthony (Tony) Laughland, a second-year BSc (Hons) Computer Science student at the University of Dundee with strong foundations in object-oriented architecture, memory management, and data structures. Previously focused on systems-level design within game engines, my current work expands into AI search algorithms and structured software modelling.
+          I am a second-year BSc (Hons) Computer Science student at the University of Dundee with strong foundations in object-oriented architecture, memory management, and data structures. 
+          Previously focused on systems-level design within game engines, my current work expands into AI search algorithms and structured software modelling. 
+          Currently seeking a Software Engineering industrial or summer placement.
         </p>
 
         <div class="hero-info" aria-label="Personal Information and Profiles">
@@ -60,8 +63,7 @@
 
     <section id="projects" class="section alt-bg">
       <div class="container">
-        <h2>Selected Technical Projects</h2>
-        <p class="section-subtitle">Key academic and technical systems demonstrating algorithm design, engine architecture, and low-level memory management.</p>
+        <h2>Technical Projects</h2>
 
         <div class="project-grid">
           <article class="card">
@@ -70,48 +72,411 @@
               <span class="badge">Python &bull; Group Project</span>
             </div>
             <p class="card-desc">
-              A benchmarking suite of search-based autonomous agents engineered to play 2048 under stochastic tile spawns for the CS21002 Artificial Intelligence module.
+              A collection of search-based agents engineered to play 2048 for the artificial intelligence module in my Year 2 studies at Dundee.
             </p>
             <ul class="project-details">
-              <li><strong>Role &amp; Contribution:</strong> Collaborated in a three-person team to design shared board-evaluation heuristics and implement Expectimax, Beam Search, and Greedy Best-First Search in Python.</li>
-              <li><strong>Challenges &amp; Outcomes:</strong> Balanced search tree depth against execution time across thousands of simulated moves, ranking agent progression objectively and demonstrating Expectimax's advantage under random state transitions.</li>
+              <li><strong>Role &amp; Contribution:</strong> Worked in a three-person team to create, test, and compare different search-based algorithms and how well they played the game—specifically Expectimax, Beam Search, and Greedy Best-First Search in Python.</li>
+              <li><strong>Challenges &amp; Outcomes:</strong> Balanced search depth against computation time across all algorithms, then ranked agent progression with shared heuristics, ultimately demonstrating Expectimax's advantage under random state transitions.</li>
             </ul>
             <div class="card-footer">
-              <a href="https://github.com/TonzToni" target="_blank" rel="noopener noreferrer">View on GitHub &rarr;</a>
+              <span>Private code.</span>
             </div>
           </article>
+
           <article class="card">
             <div class="card-header">
               <h3>Seamless Non-Euclidean Portal System</h3>
               <span class="badge">Unity &bull; C#</span>
             </div>
             <p class="card-desc">
-              A real-time spatial portal mechanic built inside a standard 3D game engine to achieve seamless visual rendering and physics traversal.
+              Real-time non-Euclidean space built inside Unity to achieve seamless portal traversal.
             </p>
             <ul class="project-details">
-              <li><strong>Role &amp; Contribution:</strong> Architected the end-to-end rendering and traversal pipeline using dynamic render textures, projection matrix manipulation, and live relative position tracking.</li>
-              <li><strong>Challenges &amp; Outcomes:</strong> Eliminated camera clipping and visual seams across linked portal orientations while maintaining smooth frame rates and extensible support for recursive views.</li>
+              <li><strong>Role &amp; Contribution:</strong> Created the visual illusion through the use of dynamic render textures, projection matrix manipulation, and live relative position tracking.</li>
+              <li><strong>Challenges &amp; Outcomes:</strong> Solved camera clipping by manipulating the near clipping plane used by the projection matrix to avoid rendering unneeded objects, allowing the project to potentially be expanded further with mechanics such as recursive rendering support.</li>
             </ul>
             <div class="card-footer">
-              <a href="https://github.com/TonzToni" target="_blank" rel="noopener noreferrer">View on GitHub &rarr;</a>
+              <span>Private code.</span>
             </div>
           </article>
+          
           <article class="card">
             <div class="card-header">
-              <h3>Chained Hash Table &amp; File Processor</h3>
-              <span class="badge">C &bull; Data Structures</span>
+              <h3>Modular Entity &amp; Interaction Framework</h3>
+              <span class="badge">Unity &bull; C# &bull; Group Project</span>
             </div>
             <p class="card-desc">
-              A command-line text indexing and frequency-lookup utility written in C without relying on high-level standard collection libraries.
+              A foundational gameplay architecture built in Unity for a 3D game project developed by me and six others.
             </p>
             <ul class="project-details">
-              <li><strong>Role &amp; Contribution:</strong> Implemented a dynamic chained hash table from scratch using manual heap allocation (<code>malloc</code>/<code>free</code>), collision-handling linked lists, and deterministic file-stream parsing.</li>
-              <li><strong>Challenges &amp; Outcomes:</strong> Enforced strict pointer boundary checks and deterministic cleanup to prevent memory leaks while delivering fast O(1) average-case key lookup across large text inputs.</li>
+              <li><strong>Role &amp; Contribution:</strong> Designed and implemented the base classes and interfaces in C# used across all game entities and interactable objects to create a robust and reliable system.</li>
+              <li><strong>Challenges &amp; Outcomes:</strong> Structured the system so designers and fellow programmers could understand and implement features easily, reducing integration workload by enforcing a clear, structured interaction path.</li>
             </ul>
             <div class="card-footer">
-              <a href="https://github.com/TonzToni" target="_blank" rel="noopener noreferrer">View on GitHub &rarr;</a>
+              <span>Private code.</span>
             </div>
           </article>
+        </div>
+
+        <div class="code-showcase">
+          <h2>Code Showcase</h2>
+          <div class="code-showcase-stage">
+            <button type="button" class="code-nav-btn" id="code-prev" aria-label="Previous code snippet">&larr;</button>
+            <div class="code-showcase-viewport">
+              <div class="code-showcase-grid">
+            <div class="code-card">
+              <div class="code-card-header">Sorting algorithm &mdash; Save Score (C#)</div>
+              <pre><code class="language-csharp">using System;
+using System.Collections.Generic;
+using System.IO;
+
+namespace HighScoreLibrary
+{
+    public class HighScoreManager
+    {
+        string highScoreFile;
+        int counter = 0;
+
+
+        public HighScoreManager(String highScoreFilePath)
+        {
+           highScoreFile = highScoreFilePath;
+        }
+
+        public void SaveHighScore(String playerName, int moves)
+        {
+            // write new player score into highscore file, creates file if one doesnt exist
+            using (StreamWriter writer = new StreamWriter(highScoreFile, true))
+            {
+                writer.WriteLine($"{playerName},{moves}");
+            }
+        }
+
+        public void LoadHighScores()
+        {
+            // looks for a highscore file to sort, if not print as such
+            if (File.Exists(highScoreFile))
+            {
+                DisplayHighScores();
+            }
+            else
+            {
+                Console.WriteLine("No high scores yet!");
+            }
+        }
+        static void MergeSort(List<(string name, int score)> list)
+        {
+            // get length of input list and if 1 or less no sorting is done
+            int length = list.Count;
+            if (length <= 1) return;
+
+            // calculate middle num of list
+            int middle = length / 2;
+
+            // create 2 lists each being half of the overall list being altered
+            List<(string name, int score)> leftList = list.GetRange(0, middle);
+            List<(string name, int score)> rightList = list.GetRange(middle, length - middle);
+
+            // repeat above code for both sides until list is count 1 or below
+            MergeSort(leftList);
+            MergeSort(rightList);
+
+            Merge(leftList, rightList, list);
+        }
+
+        static void Merge(List<(string name, int score)> leftList, List<(string name, int score)> rightList, List<(string name, int score)> list)
+        {
+            // declare size of lists
+            int leftSize = leftList.Count;
+            int rightSize = rightList.Count;
+
+            // for looping
+            int i = 0, l = 0, r = 0;
+
+            // while both left and right are less than current increment add to halfed list
+            while (l < leftSize && r < rightSize)
+            {
+                // if left[increment] is less than right[increment] left has the lowest number
+                if (leftList[l].score < rightList[r].score)
+                {
+                    // add left to list and increment i,l
+                    list[i] = leftList[l];
+                    i++;
+                    l++;
+                }
+                // else means right is larger or equal
+                else
+                {
+                    // add right to list and increment i,r
+                    list[i] = rightList[r];
+                    i++;
+                    r++;
+                }
+            }
+
+            // cleanup process incase left and right were uneven
+            while (l < leftSize)
+            {
+                // if any leftover in the left add to main list and increment i,l
+                list[i] = leftList[l];
+                i++;
+                l++;
+            }
+            while (r < rightSize)
+            {
+                // if any leftover in the right add to main list and increment i,r
+                list[i] = rightList[r];
+                i++;
+                r++;
+            }
+        }
+
+        public void DisplayHighScores()
+        {
+            // find highscore file
+            if (File.Exists(highScoreFile))
+            {
+                using (StreamReader reader = new StreamReader(highScoreFile))
+                {
+                    // create list to input name and score
+                    List<(string name, int score)> list = new List<(string name, int score)>();
+
+                    // read next line until none left to read
+                    string line;
+                    while ((line = reader.ReadLine()) != null)
+                    {
+                        // find split in line declaring what part is name and what part is score
+                        string[] parts = line.Split(',');
+                        if (parts.Length == 2)
+                        {
+                            // add name and score to list in that order
+                            list.Add((parts[0], Int32.Parse(parts[1])));
+
+                            // increment counter
+                            counter++;
+                        }
+                    }
+
+
+                    /*
+                    cuts list down into individual elements through recursion,
+                    then builds it back up while comparing sizes of each element to order them properly
+                    */
+                    // start initial merge sorting
+                    MergeSort(list);
+
+                    Console.Clear();
+                    Console.WriteLine("High Scores:");
+
+                    int scoreOutputCounter = 0;
+                    // loop through and print out sorted list
+                    for (int i = list.Count-1; i > 0; i--)
+                    {
+                        // stopper after top 10 printed out
+                        if (scoreOutputCounter > 10)
+                            return;
+
+                        // print score and increment count for stopper
+                        scoreOutputCounter++;
+                        Console.WriteLine(list[i].name + " Moves: " + list[i].score);
+                    }
+                }
+            }
+        }
+
+
+        public void EndOfGame(int score)
+        {
+            Console.Clear();
+            Console.WriteLine("Game Over!");
+
+            // Ask for the player's name
+            Console.Write("Enter your name: ");
+            string playerName = Console.ReadLine();
+
+            // Save the high score
+            SaveHighScore(playerName, score);
+
+            // Load and display high scores
+            LoadHighScores();
+        }
+    }
+}
+</code></pre>
+            </div>
+
+            <div class="code-card">
+              <div class="code-card-header">Portal System &mdash; Plane Render (C#)</div>
+              <pre><code class="language-csharp">using System;
+using UnityEngine;
+
+public class PortalRender : MonoBehaviour
+{
+    [Header("Portal One")]
+    public GameObject portalOne;
+    public GameObject portalOneRender;
+    public Camera portalOneCam;
+
+    [Header("Portal Two")]
+    public GameObject portalTwo;
+    public GameObject portalTwoRender;
+    public Camera portalTwoCam;
+
+
+    private Camera mainCamera;
+
+    private RenderTexture entryPortalTex;
+    private RenderTexture exitPortalTex;
+
+    void Awake()
+    {
+        // find cameras
+        mainCamera = GameObject.FindGameObjectWithTag("PlayerCamera").GetComponent<Camera>();
+
+        // create render texture for both portals, the RenderTextureFormat specifically needs to be set to match main camera
+        entryPortalTex = new RenderTexture(Screen.width, Screen.height, 24, RenderTextureFormat.ARGBFloat);
+        exitPortalTex = new RenderTexture(Screen.width, Screen.height, 24, RenderTextureFormat.ARGBFloat);
+    }
+
+    void Start()
+    {
+        // assign render texture to camera
+        portalOneCam.targetTexture = exitPortalTex;
+        portalTwoCam.targetTexture = entryPortalTex;
+
+        // set portals mat texture to render texture
+        portalOne.GetComponentInChildren<Renderer>().material.SetTexture("_MainTex", entryPortalTex);
+        portalTwo.GetComponentInChildren<Renderer>().material.SetTexture("_MainTex", exitPortalTex);
+    }
+
+    void LateUpdate()
+    {
+        // sets up texture and camera befoe main player camera
+        SetupPortalRender();
+    }
+
+    // sets up portal right before main camera render
+    private void SetupPortalRender()
+    {
+            // match camera render texture resolution with game resolution
+            // configure portal cam transforms
+            // put zNear at the portal plane so it doesnt render objects behind portal
+
+            // entry portal
+            ResizeRenderTex(entryPortalTex, portalTwoCam);
+            CameraTransform(portalTwoCam, portalOne);
+            SetPortalClippingPlane(portalTwoCam, portalTwoRender.transform);
+            
+            // exit portal
+            ResizeRenderTex(exitPortalTex, portalOneCam);
+            CameraTransform(portalOneCam, portalTwo);
+            SetPortalClippingPlane(portalOneCam, portalOneRender.transform);
+    }
+
+    void ResizeRenderTex(RenderTexture tex, Camera cam)
+    {
+        if (tex.width != Screen.width || tex.height != Screen.height)
+        {
+            // allows for window size changes dynamically without affecting portal
+            tex.Release();
+            tex.width = Screen.width;
+            tex.height = Screen.height;
+            cam.ResetAspect();
+        }
+
+        // keep fov the same on all cams
+        cam.fieldOfView = mainCamera.fieldOfView;
+    }
+
+    void CameraTransform(Camera cam, GameObject portal)
+    {
+        // calculate player position as if it were child to portal
+        Vector3 camPosOffset = portal.transform.InverseTransformPoint(mainCamera.transform.position);
+
+        // set calculated position with inverted x / z so its behind portal
+        cam.transform.localPosition = new Vector3(-camPosOffset.x, camPosOffset.y, -camPosOffset.z);
+
+        // get both portal camera to copy main camera rotation reletive to there respective portals
+        cam.transform.localRotation = Quaternion.Inverse(portal.transform.rotation) * mainCamera.transform.rotation;
+
+        // apply a 180 degree offset so it faces portal
+        cam.transform.localEulerAngles -= new Vector3(0, 180f, 0);
+    }
+
+    
+
+    /**************************************************************************************
+    finds and sets the cameras zNear using the Oblique projection matrix
+
+    though id class this as a required standard algorithm, the struture came from 
+    'Daniel Ilett (2019), https://danielilett.com/2019-12-18-tut4-3-matrix-matching/'
+    **************************************************************************************/
+    void SetPortalClippingPlane(Camera portalCam, Transform portalSurface)
+    {
+        // finds exact location of renderplane, the 2f hardcoded represents diference of space between portals
+        Vector3 portalPlaneOffset = portalSurface.position - portalSurface.forward * (Math.Abs(portalSurface.localPosition.z) * 2);
+
+        // create a clip plane where the render plane is and converts to world space coordinates for projection matrix
+        Plane p = new Plane(-portalSurface.forward, portalPlaneOffset);
+        Vector4 clipPlane = new Vector4(p.normal.x, p.normal.y, p.normal.z, p.distance);
+
+        // creates a new projection matrix with the new zNear calculation
+        Vector4 clipPlaneCameraSpace = Matrix4x4.Transpose(Matrix4x4.Inverse(portalCam.worldToCameraMatrix)) * clipPlane;
+
+        // overrite the standard projection matrix with the new sqewed zNear at render plane
+        portalCam.projectionMatrix = portalCam.CalculateObliqueMatrix(clipPlaneCameraSpace);
+    }
+}</code></pre>
+            </div>
+
+            <div class="code-card">
+              <div class="code-card-header">Entity Framework &mdash; Interaction (C#)</div>
+              <pre><code class="language-csharp">using System;
+using UnityEngine;
+
+public abstract class BaseEntity : MonoBehaviour, IDamageable
+{
+    public EntityStats stats;
+
+    private float internalHealth;
+    public float currentHealth
+    {
+        get => internalHealth;
+        set
+        {
+            // hold health value above negative
+            internalHealth = Mathf.Clamp(value, 0, stats.maxHealth);
+
+            // call Die() if health is determined to be 0 and entity is still alive
+            if (internalHealth <= 0)
+                Die();
+        }
+    }
+
+    protected virtual void OnEnable()
+    {
+        // get health value from stats SO
+        if (stats != null) currentHealth = stats.maxHealth;
+    }
+
+    public virtual void TakeDamage(float damage, GameObject attacker)
+    {
+        currentHealth -= damage;
+    }
+
+    protected virtual void Die()
+    {
+        PlayerHealth.instance.Rumble();
+
+        // destroy entity from scene
+        Destroy(this.gameObject);
+    }
+}</code></pre>
+            </div>
+              </div>
+            </div>
+            <button type="button" class="code-nav-btn" id="code-next" aria-label="Next code snippet">&rarr;</button>
+          </div>
         </div>
       </div>
     </section>
@@ -134,49 +499,14 @@
             <div class="transferable-item">
               <h4>Cross-Functional Teamwork &amp; Communication</h4>
               <p>
-                Coordinated algorithm benchmarking and code integration within a three-person university AI team, as well as collaborating daily with warehouse, crane, and fabrication teams at J&amp;D Pierce to verify steel batching schedules without error.
+                Coordinated algorithm benchmarking and code integration within a three-person university AI team.
               </p>
             </div>
             <div class="transferable-item">
               <h4>Analytical Problem-Solving &amp; Diagnostics</h4>
               <p>
-                Applied structured debugging across C memory management, 3D matrix transformations, and board-level electronics fault diagnosis—isolating root causes systematically under tight deadlines.
+                Applied structured debugging across C memory management and 3D projection matrix transformations.
               </p>
-            </div>
-            <div class="transferable-item">
-              <h4>Rapid Adaptability &amp; Self-Directed Learning</h4>
-              <p>
-                Transitioned directly into Year 2 BSc Computer Science at Dundee while administering self-hosted Linux virtual machines, dedicated game servers, and onboarding new colleagues during early-morning logistics shifts.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="code-samples">
-          <h3>Example Code Snippets</h3>
-          <div class="code-samples-grid">
-            <div class="code-preview" aria-label="Sample C Hash Table Lookup Snippet">
-              <div class="code-title">Code Sample 1 &mdash; Chained Hash Table Lookup (C)</div>
-              <pre><code>Node *lookup(HashTable *ht, const char *key) {
-    unsigned int idx = hash_fn(key) % ht-&gt;capacity;
-    for (Node *curr = ht-&gt;buckets[idx]; curr != NULL; curr = curr-&gt;next) {
-        if (strcmp(curr-&gt;key, key) == 0) return curr;
-    }
-    return NULL;
-}</code></pre>
-            </div>
-
-            <div class="code-preview" aria-label="Sample Python Expectimax Search Snippet">
-              <div class="code-title">Code Sample 2 &mdash; Expectimax Chance Node (Python)</div>
-              <pre><code>def expectimax(board, depth, is_player_turn):
-    if depth == 0 or is_terminal(board):
-        return evaluate_board(board)
-    if is_player_turn:
-        return max(expectimax(move(board, d), depth - 1, False) for d in VALID_MOVES)
-    empty = get_empty_cells(board)
-    return sum(0.9 * expectimax(place(board, c, 2), depth - 1, True)
-               + 0.1 * expectimax(place(board, c, 4), depth - 1, True)
-               for c in empty) / len(empty)</code></pre>
             </div>
           </div>
         </div>
@@ -186,24 +516,20 @@
     <section id="cv" class="section alt-bg">
       <div class="container">
         <h2>Curriculum Vitae &amp; Target Role</h2>
-        <p class="section-subtitle">
-          Aligned with my LinkedIn profile and tailored for the <strong>Lloyds Banking Group Software Engineering Industrial Placement</strong>.
-        </p>
         <div class="doc-cards">
           <div class="doc-card">
             <h3>Two-Page Curriculum Vitae (PDF)</h3>
-            <p>Full breakdown of education, technical projects, J&amp;D Pierce operational experience, and technical interests.</p>
             <div class="cta-group">
-              <a href="data/Anthony_Laughland_CV.pdf" class="btn btn-primary" download>Download CV (PDF)</a>
+              <a href="data/Anthony_Laughland_CV.pdf" class="btn btn-primary" download>Download CV PDF</a>
               <a href="data/Anthony_Laughland_CV.pdf" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">View in Browser</a>
             </div>
           </div>
 
           <div class="doc-card">
-            <h3>Appendix: Target Job Advert (Offline PDF)</h3>
-            <p>Archived offline copy of the Lloyds Banking Group (Group COO) Software Engineering Industrial Placement listing.</p>
+            <h3>Target Job Advert (Offline PDF)</h3>
             <div class="cta-group">
-              <a href="data/Lloyds_Job_Advert.pdf" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Open Job Advert PDF</a>
+              <a href="data/Lloyds_Job_Advert.pdf" class="btn btn-primary" download>Download Job Advert PDF</a>
+              <a href="data/Lloyds_Job_Advert.pdf" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">View in Browser</a>
             </div>
           </div>
         </div>
@@ -216,5 +542,8 @@
       <p>&copy; 2026 Anthony (Tony) Laughland &bull; Dundee, Scotland</p>
     </div>
   </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
